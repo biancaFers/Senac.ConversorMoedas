@@ -29,18 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConversor));
-            toolStripLabel1 = new ToolStripLabel();
+            toolStripLabelValorMoeda = new ToolStripLabel();
             comboBoxMoedaOrigem = new ComboBox();
             label2 = new Label();
             pictureBoxImagemOrigem = new PictureBox();
-            labelValorMoedaOrigem = new Label();
             textBoxValorOrigem = new TextBox();
             panel5 = new Panel();
             panel3 = new Panel();
             comboBoxMoedaDestino = new ComboBox();
             pictureBoxImagemDestino = new PictureBox();
             label3 = new Label();
-            labelValorMoedaDestino = new Label();
             textBoxValorDestino = new TextBox();
             panel6 = new Panel();
             buttonConverter = new Button();
@@ -60,11 +58,11 @@
             panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // toolStripLabel1
+            // toolStripLabelValorMoeda
             // 
-            toolStripLabel1.Name = "toolStripLabel1";
-            toolStripLabel1.Size = new Size(86, 22);
-            toolStripLabel1.Text = "toolStripLabel1";
+            toolStripLabelValorMoeda.Name = "toolStripLabelValorMoeda";
+            toolStripLabelValorMoeda.Size = new Size(86, 22);
+            toolStripLabelValorMoeda.Text = "toolStripLabel1";
             // 
             // comboBoxMoedaOrigem
             // 
@@ -95,16 +93,6 @@
             pictureBoxImagemOrigem.TabIndex = 0;
             pictureBoxImagemOrigem.TabStop = false;
             // 
-            // labelValorMoedaOrigem
-            // 
-            labelValorMoedaOrigem.AutoSize = true;
-            labelValorMoedaOrigem.ForeColor = Color.DimGray;
-            labelValorMoedaOrigem.Location = new Point(17, 223);
-            labelValorMoedaOrigem.Name = "labelValorMoedaOrigem";
-            labelValorMoedaOrigem.Size = new Size(38, 15);
-            labelValorMoedaOrigem.TabIndex = 2;
-            labelValorMoedaOrigem.Text = "label4";
-            // 
             // textBoxValorOrigem
             // 
             textBoxValorOrigem.BackColor = Color.Coral;
@@ -129,7 +117,6 @@
             // panel3
             // 
             panel3.BackColor = Color.FloralWhite;
-            panel3.Controls.Add(labelValorMoedaOrigem);
             panel3.Controls.Add(textBoxValorOrigem);
             panel3.Controls.Add(panel5);
             panel3.Location = new Point(12, 78);
@@ -166,19 +153,10 @@
             label3.TabIndex = 4;
             label3.Text = "Moeda destino";
             // 
-            // labelValorMoedaDestino
-            // 
-            labelValorMoedaDestino.AutoSize = true;
-            labelValorMoedaDestino.ForeColor = Color.DimGray;
-            labelValorMoedaDestino.Location = new Point(16, 223);
-            labelValorMoedaDestino.Name = "labelValorMoedaDestino";
-            labelValorMoedaDestino.Size = new Size(38, 15);
-            labelValorMoedaDestino.TabIndex = 3;
-            labelValorMoedaDestino.Text = "label5";
-            // 
             // textBoxValorDestino
             // 
             textBoxValorDestino.BackColor = Color.MidnightBlue;
+            textBoxValorDestino.Enabled = false;
             textBoxValorDestino.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             textBoxValorDestino.Location = new Point(16, 121);
             textBoxValorDestino.Name = "textBoxValorDestino";
@@ -205,11 +183,11 @@
             buttonConverter.Size = new Size(50, 50);
             buttonConverter.TabIndex = 2;
             buttonConverter.UseVisualStyleBackColor = true;
+            buttonConverter.Click += buttonConverter_Click;
             // 
             // panel4
             // 
             panel4.BackColor = Color.OldLace;
-            panel4.Controls.Add(labelValorMoedaDestino);
             panel4.Controls.Add(textBoxValorDestino);
             panel4.Controls.Add(panel6);
             panel4.Location = new Point(488, 78);
@@ -230,7 +208,7 @@
             // toolStrip1
             // 
             toolStrip1.Dock = DockStyle.Bottom;
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripLabel1 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripLabelValorMoeda });
             toolStrip1.Location = new Point(0, 425);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(800, 25);
@@ -290,18 +268,16 @@
 
         #endregion
 
-        private ToolStripLabel toolStripLabel1;
+        private ToolStripLabel toolStripLabelValorMoeda;
         private ComboBox comboBoxMoedaOrigem;
         private Label label2;
         private PictureBox pictureBoxImagemOrigem;
-        private Label labelValorMoedaOrigem;
         private TextBox textBoxValorOrigem;
         private Panel panel5;
         private Panel panel3;
         private ComboBox comboBoxMoedaDestino;
         private PictureBox pictureBoxImagemDestino;
         private Label label3;
-        private Label labelValorMoedaDestino;
         private TextBox textBoxValorDestino;
         private Panel panel6;
         private Button buttonConverter;
